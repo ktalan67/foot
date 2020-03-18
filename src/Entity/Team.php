@@ -30,25 +30,9 @@ class Team
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Championship", inversedBy="teams")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $championship;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Match", mappedBy="teams")
-     */
-    private $matches;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Competition", inversedBy="teams")
-     */
-    private $competition;
-
-    public function __construct()
-    {
-        $this->matches = new ArrayCollection();
-        $this->competition = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -87,60 +71,6 @@ class Team
     public function setChampionship(?Championship $championship): self
     {
         $this->championship = $championship;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Match[]
-     */
-    public function getMatches(): Collection
-    {
-        return $this->matches;
-    }
-
-    public function addMatch(Match $match): self
-    {
-        if (!$this->matches->contains($match)) {
-            $this->matches[] = $match;
-            $match->addTeam($this);
-        }
-
-        return $this;
-    }
-
-    public function removeMatch(Match $match): self
-    {
-        if ($this->matches->contains($match)) {
-            $this->matches->removeElement($match);
-            $match->removeTeam($this);
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Competition[]
-     */
-    public function getCompetition(): Collection
-    {
-        return $this->competition;
-    }
-
-    public function addCompetition(Competition $competition): self
-    {
-        if (!$this->competition->contains($competition)) {
-            $this->competition[] = $competition;
-        }
-
-        return $this;
-    }
-
-    public function removeCompetition(Competition $competition): self
-    {
-        if ($this->competition->contains($competition)) {
-            $this->competition->removeElement($competition);
-        }
 
         return $this;
     }

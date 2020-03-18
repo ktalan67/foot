@@ -199,6 +199,13 @@
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\StadeController"/>
       </call>
     </service>
+    <service id="App\Controller\TeamController" class="App\Controller\TeamController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\TeamController"/>
+      </call>
+    </service>
     <service id="App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -212,6 +219,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\StadeType" class="App\Form\StadeType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\TeamType" class="App\Form\TeamType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\ChampionshipRepository" class="App\Repository\ChampionshipRepository" autowire="true" autoconfigure="true">
@@ -557,6 +567,7 @@
         <argument>App\Form\MatchType</argument>
         <argument>App\Form\PlayerType</argument>
         <argument>App\Form\StadeType</argument>
+        <argument>App\Form\TeamType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -901,7 +912,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.TX4DCDD"/>
+      <argument type="service" id=".service_locator.hE7XmZD"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2299,6 +2310,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StadeController" class="App\Controller\StadeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StadeController" class="App\Controller\StadeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\StadeController" class="App\Controller\StadeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CompetitionType" class="App\Form\CompetitionType" autowire="true" abstract="true"/>
@@ -2309,6 +2323,8 @@
     <service id=".abstract.instanceof.App\Form\PlayerType" class="App\Form\PlayerType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\StadeType" class="App\Form\StadeType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\StadeType" class="App\Form\StadeType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TeamType" class="App\Form\TeamType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\TeamType" class="App\Form\TeamType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ChampionshipRepository" class="App\Repository\ChampionshipRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ChampionshipRepository" class="App\Repository\ChampionshipRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CompetitionRepository" class="App\Repository\CompetitionRepository" autowire="true" abstract="true"/>
@@ -2564,7 +2580,19 @@
         <argument key="stade" type="service" id=".errored..service_locator.Lsdpueu.App\Entity\Stade"/>
       </argument>
     </service>
-    <service id=".service_locator.SvzXd5F" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.sO8OnEd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="teamRepository" type="service" id="App\Repository\TeamRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.S6VMuve" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="team" type="service" id=".errored..service_locator.S6VMuve.App\Entity\Team"/>
+      </argument>
+    </service>
+    <service id=".service_locator.toxc3bU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ChampionshipController::delete" type="service" id=".service_locator.uA.GKRP"/>
@@ -2587,6 +2615,10 @@
         <argument key="App\Controller\StadeController::edit" type="service" id=".service_locator.Lsdpueu"/>
         <argument key="App\Controller\StadeController::index" type="service" id=".service_locator.RXBCY.J"/>
         <argument key="App\Controller\StadeController::show" type="service" id=".service_locator.Lsdpueu"/>
+        <argument key="App\Controller\TeamController::delete" type="service" id=".service_locator.S6VMuve"/>
+        <argument key="App\Controller\TeamController::edit" type="service" id=".service_locator.S6VMuve"/>
+        <argument key="App\Controller\TeamController::index" type="service" id=".service_locator.sO8OnEd"/>
+        <argument key="App\Controller\TeamController::show" type="service" id=".service_locator.S6VMuve"/>
       </argument>
     </service>
     <service id=".service_locator._tpP3ur" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -2641,7 +2673,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.TX4DCDD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.hE7XmZD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ChampionshipType" type="service" id="App\Form\ChampionshipType"/>
@@ -2649,6 +2681,7 @@
         <argument key="App\Form\MatchType" type="service" id="App\Form\MatchType"/>
         <argument key="App\Form\PlayerType" type="service" id="App\Form\PlayerType"/>
         <argument key="App\Form\StadeType" type="service" id="App\Form\StadeType"/>
+        <argument key="App\Form\TeamType" type="service" id="App\Form\TeamType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
@@ -2714,6 +2747,12 @@
     <service id=".service_locator.pNNo5z3.App\Controller\StadeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\StadeController"/>
       <argument>App\Controller\StadeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\TeamController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\TeamController"/>
+      <argument>App\Controller\TeamController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
@@ -2795,18 +2834,19 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver" public="false"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver" public="false"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.SvzXd5F"/>
+      <argument type="service" id=".service_locator.toxc3bU"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.SvzXd5F"/>
+      <argument type="service" id=".service_locator.toxc3bU"/>
     </service>
     <service id=".errored..service_locator.uA.GKRP.App\Entity\Championship" class="App\Entity\Championship"/>
     <service id=".errored..service_locator.LapjzVG.App\Entity\Competition" class="App\Entity\Competition"/>
     <service id=".errored..service_locator.e6Y9184.App\Entity\Match" class="App\Entity\Match"/>
     <service id=".errored..service_locator.FxVgDxl.App\Entity\Player" class="App\Entity\Player"/>
     <service id=".errored..service_locator.Lsdpueu.App\Entity\Stade" class="App\Entity\Stade"/>
+    <service id=".errored..service_locator.S6VMuve.App\Entity\Team" class="App\Entity\Team"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.MMeBovE"/>
       <argument type="collection">
@@ -3041,7 +3081,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.SvzXd5F"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.toxc3bU"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
     <service id=".service_locator.KMLuThm" alias=".service_locator._tpP3ur" public="false"/>

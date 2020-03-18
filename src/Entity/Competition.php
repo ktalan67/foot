@@ -28,15 +28,9 @@ class Competition
      */
     private $players;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Team", mappedBy="competition")
-     */
-    private $teams;
-
     public function __construct()
     {
         $this->players = new ArrayCollection();
-        $this->teams = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -84,31 +78,4 @@ class Competition
         return $this;
     }
 
-    /**
-     * @return Collection|Team[]
-     */
-    public function getTeams(): Collection
-    {
-        return $this->teams;
-    }
-
-    public function addTeam(Team $team): self
-    {
-        if (!$this->teams->contains($team)) {
-            $this->teams[] = $team;
-            $team->addCompetition($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTeam(Team $team): self
-    {
-        if ($this->teams->contains($team)) {
-            $this->teams->removeElement($team);
-            $team->removeCompetition($this);
-        }
-
-        return $this;
-    }
 }

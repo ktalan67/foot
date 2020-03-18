@@ -19,7 +19,7 @@ class Match
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $score;
 
@@ -44,19 +44,9 @@ class Match
     private $redcard;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Team", inversedBy="matches")
-     */
-    private $teams;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Stade")
      */
     private $stade;
-
-    public function __construct()
-    {
-        $this->teams = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -119,32 +109,6 @@ class Match
     public function setRedcard(?int $redcard): self
     {
         $this->redcard = $redcard;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Team[]
-     */
-    public function getTeams(): Collection
-    {
-        return $this->teams;
-    }
-
-    public function addTeam(Team $team): self
-    {
-        if (!$this->teams->contains($team)) {
-            $this->teams[] = $team;
-        }
-
-        return $this;
-    }
-
-    public function removeTeam(Team $team): self
-    {
-        if ($this->teams->contains($team)) {
-            $this->teams->removeElement($team);
-        }
 
         return $this;
     }
