@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stade index{% endblock %}
+
+{% block body %}
+    <h1>Stade index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Capacity</th>
+                <th>City</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stade in stades %}
+            <tr>
+                <td>{{ stade.id }}</td>
+                <td>{{ stade.name }}</td>
+                <td>{{ stade.capacity }}</td>
+                <td>{{ stade.city }}</td>
+                <td>
+                    <a href="{{ path('stade_show', {'id': stade.id}) }}">show</a>
+                    <a href="{{ path('stade_edit', {'id': stade.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('stade_new') }}">Create new</a>
+{% endblock %}
