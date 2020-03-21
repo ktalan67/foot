@@ -12,6 +12,7 @@ return [
         '/championship/new' => [[['_route' => 'championship_new', '_controller' => 'App\\Controller\\ChampionshipController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/competition' => [[['_route' => 'competition_index', '_controller' => 'App\\Controller\\CompetitionController::index'], null, ['GET' => 0], null, true, false, null]],
         '/competition/new' => [[['_route' => 'competition_new', '_controller' => 'App\\Controller\\CompetitionController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\MainController::index'], null, ['GET' => 0], null, false, false, null]],
         '/match' => [[['_route' => 'match_index', '_controller' => 'App\\Controller\\MatchController::index'], null, ['GET' => 0], null, true, false, null]],
         '/match/new' => [[['_route' => 'match_new', '_controller' => 'App\\Controller\\MatchController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/player' => [[['_route' => 'player_index', '_controller' => 'App\\Controller\\PlayerController::index'], null, ['GET' => 0], null, true, false, null]],

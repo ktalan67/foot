@@ -14,6 +14,7 @@ return [
     'competition_show' => [['id'], ['_controller' => 'App\\Controller\\CompetitionController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/competition']], [], []],
     'competition_edit' => [['id'], ['_controller' => 'App\\Controller\\CompetitionController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/competition']], [], []],
     'competition_delete' => [['id'], ['_controller' => 'App\\Controller\\CompetitionController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/competition']], [], []],
+    'index' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
     'match_index' => [[], ['_controller' => 'App\\Controller\\MatchController::index'], [], [['text', '/match/']], [], []],
     'match_new' => [[], ['_controller' => 'App\\Controller\\MatchController::new'], [], [['text', '/match/new']], [], []],
     'match_show' => [['id'], ['_controller' => 'App\\Controller\\MatchController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/match']], [], []],
