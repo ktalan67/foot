@@ -23,75 +23,65 @@
             <div class="navbar-collapse collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="{{ path('index') }}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ path('index') }}">Home<span class="sr-only">(current)</span></a>
               </li>
                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{{ path('index') }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  User
+                <a class="nav-link dropdown-toggle" href="{{ path('championship_index') }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Championship
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
+                      <a class="dropdown-item" href="{{ path('championship_index') }}">List</a>
+                      <a class="dropdown-item" href="{{ path('championship_new') }}">Add</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Program
+                  Competition
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
+                  <a class="dropdown-item" href="{{ path('competition_index') }}">List</a>
+                  <a class="dropdown-item" href="{{ path('competition_new') }}">Add</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Exercise
+                  Match
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
+                  <a class="dropdown-item" href="{{ path('match_index') }}">List</a>
+                  <a class="dropdown-item" href="{{ path('match_new') }}">Add</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Comments
+                  Player
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">Program Comments</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Exercise Comments</a>
+                  <a class="dropdown-item" href="{{ path('player_index') }}">List</a>
+                  <a class="dropdown-item" href="{{ path('player_new') }}">Add</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Hint
+                  Stade
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
+                  <a class="dropdown-item" href="{{ path('stade_index') }}">List</a>
+                  <a class="dropdown-item" href="{{ path('stade_new') }}">Add</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Prerequisite
+                  Team
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
-                </div>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  MasteryLevel
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ path('index') }}">List</a>
-                  <a class="dropdown-item" href="{{ path('index') }}">Add</a>
+                  <a class="dropdown-item" href="{{ path('team_index') }}">List</a>
+                  <a class="dropdown-item" href="{{ path('team_new') }}">Add</a>
                 </div>
               </li>
               </ul>

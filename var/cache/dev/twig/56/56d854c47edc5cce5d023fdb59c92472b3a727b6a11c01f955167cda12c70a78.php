@@ -59,13 +59,13 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
         ";
         // line 16
         $this->displayBlock('header', $context, $blocks);
-        // line 113
+        // line 103
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 114
+        // line 104
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 131
+        // line 121
         echo "    </body>
 </html>";
         
@@ -135,150 +135,134 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
                 <a class=\"nav-link\" href=\"";
         // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">Home <span class=\"sr-only\">(current)</span></a>
+        echo "\">Home<span class=\"sr-only\">(current)</span></a>
               </li>
                <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"";
         // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("championship_index");
         echo "\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  User
+                  Championship
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                       <a class=\"dropdown-item\" href=\"";
         // line 33
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("championship_index");
         echo "\">List</a>
-                  <a class=\"dropdown-item\" href=\"";
+                      <a class=\"dropdown-item\" href=\"";
         // line 34
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("championship_new");
         echo "\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Program
+                  Competition
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                   <a class=\"dropdown-item\" href=\"";
         // line 43
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competition_index");
         echo "\">List</a>
                   <a class=\"dropdown-item\" href=\"";
         // line 44
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("competition_new");
         echo "\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Exercise
+                  Match
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                   <a class=\"dropdown-item\" href=\"";
         // line 53
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("match_index");
         echo "\">List</a>
                   <a class=\"dropdown-item\" href=\"";
         // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("match_new");
         echo "\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Comments
+                  Player
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                   <a class=\"dropdown-item\" href=\"";
         // line 63
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">Program Comments</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("player_index");
+        echo "\">List</a>
                   <a class=\"dropdown-item\" href=\"";
         // line 64
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">Exercise Comments</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("player_new");
+        echo "\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Hint
+                  Stade
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                   <a class=\"dropdown-item\" href=\"";
         // line 73
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("stade_index");
         echo "\">List</a>
                   <a class=\"dropdown-item\" href=\"";
         // line 74
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("stade_new");
         echo "\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Prerequisite
+                  Team
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                   <a class=\"dropdown-item\" href=\"";
         // line 83
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("team_index");
         echo "\">List</a>
                   <a class=\"dropdown-item\" href=\"";
         // line 84
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">Add</a>
-                </div>
-              </li>
-
-              <li class=\"nav-item dropdown\">
-                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  MasteryLevel
-                </a>
-                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"";
-        // line 93
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">List</a>
-                  <a class=\"dropdown-item\" href=\"";
-        // line 94
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("team_new");
         echo "\">Add</a>
                 </div>
               </li>
               </ul>
               ";
-        // line 98
+        // line 88
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 99
+            // line 89
             echo "              <ul class=\"navbar-nav\">
               <li class=\"nav-item\">
                   <a class=\"btn btn-sm btn-outline-warning\" href=\"";
-            // line 101
+            // line 91
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
             echo "\">Logout</a>
               </li>
               </ul>
               ";
         }
-        // line 104
+        // line 94
         echo " 
             </div>
             </nav>
             ";
-        // line 107
+        // line 97
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 107, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 107));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 97, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 97));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 108
+            // line 98
             echo "              <div class=\"alert alert-success\">
                   ";
-            // line 109
+            // line 99
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
               </div>
@@ -287,14 +271,14 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 102
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 113
+    // line 103
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -306,14 +290,14 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
 
     }
 
-    // line 114
+    // line 104
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 115
+        // line 105
         echo "            <script>
                 var imgField = document.getElementsByClassName('custom-file-input')[0];
                 function message(event){
@@ -342,7 +326,7 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
 
     public function getDebugInfo()
     {
-        return array (  317 => 115,  310 => 114,  298 => 113,  291 => 112,  282 => 109,  279 => 108,  275 => 107,  270 => 104,  263 => 101,  259 => 99,  257 => 98,  250 => 94,  246 => 93,  234 => 84,  230 => 83,  218 => 74,  214 => 73,  202 => 64,  198 => 63,  186 => 54,  182 => 53,  170 => 44,  166 => 43,  154 => 34,  150 => 33,  143 => 29,  137 => 26,  127 => 19,  123 => 18,  120 => 17,  113 => 16,  104 => 12,  97 => 7,  90 => 6,  77 => 5,  69 => 131,  66 => 114,  63 => 113,  61 => 16,  57 => 14,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  301 => 105,  294 => 104,  282 => 103,  275 => 102,  266 => 99,  263 => 98,  259 => 97,  254 => 94,  247 => 91,  243 => 89,  241 => 88,  234 => 84,  230 => 83,  218 => 74,  214 => 73,  202 => 64,  198 => 63,  186 => 54,  182 => 53,  170 => 44,  166 => 43,  154 => 34,  150 => 33,  143 => 29,  137 => 26,  127 => 19,  123 => 18,  120 => 17,  113 => 16,  104 => 12,  97 => 7,  90 => 6,  77 => 5,  69 => 121,  66 => 104,  63 => 103,  61 => 16,  57 => 14,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -372,75 +356,65 @@ class __TwigTemplate_3296252a313b948aff447c7c8e2ff4e3720a2d0faa9490b9ed7edf6d7bb
             <div class=\"navbar-collapse collapse\" id=\"navbarNavDropdown\">
             <ul class=\"navbar-nav mr-auto\">
               <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"{{ path('index') }}\">Home <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"{{ path('index') }}\">Home<span class=\"sr-only\">(current)</span></a>
               </li>
                <li class=\"nav-item dropdown\">
-                <a class=\"nav-link dropdown-toggle\" href=\"{{ path('index') }}\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  User
+                <a class=\"nav-link dropdown-toggle\" href=\"{{ path('championship_index') }}\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                  Championship
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                      <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
+                      <a class=\"dropdown-item\" href=\"{{ path('championship_index') }}\">List</a>
+                      <a class=\"dropdown-item\" href=\"{{ path('championship_new') }}\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Program
+                  Competition
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('competition_index') }}\">List</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('competition_new') }}\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Exercise
+                  Match
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('match_index') }}\">List</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('match_new') }}\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Comments
+                  Player
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Program Comments</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Exercise Comments</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('player_index') }}\">List</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('player_new') }}\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Hint
+                  Stade
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('stade_index') }}\">List</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('stade_new') }}\">Add</a>
                 </div>
               </li>
 
               <li class=\"nav-item dropdown\">
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  Prerequisite
+                  Team
                 </a>
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
-                </div>
-              </li>
-
-              <li class=\"nav-item dropdown\">
-                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                  MasteryLevel
-                </a>
-                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">List</a>
-                  <a class=\"dropdown-item\" href=\"{{ path('index') }}\">Add</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('team_index') }}\">List</a>
+                  <a class=\"dropdown-item\" href=\"{{ path('team_new') }}\">Add</a>
                 </div>
               </li>
               </ul>

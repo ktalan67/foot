@@ -86,6 +86,10 @@ class ComposerStaticInit28d98e44ab14bb0849cdc26c912ecd8e
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Code\\' => 13,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'D' => 
         array (
             'Doctrine\\Persistence\\' => 21,
@@ -95,11 +99,13 @@ class ComposerStaticInit28d98e44ab14bb0849cdc26c912ecd8e
             'Doctrine\\DBAL\\' => 14,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\DataFixtures\\' => 29,
             'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
+            'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
         'A' => 
@@ -330,6 +336,10 @@ class ComposerStaticInit28d98e44ab14bb0849cdc26c912ecd8e
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
         ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
         'Doctrine\\Persistence\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Persistence',
@@ -358,6 +368,10 @@ class ComposerStaticInit28d98e44ab14bb0849cdc26c912ecd8e
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
+        'Doctrine\\Common\\DataFixtures\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures',
+        ),
         'Doctrine\\Common\\Collections\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
@@ -380,6 +394,10 @@ class ComposerStaticInit28d98e44ab14bb0849cdc26c912ecd8e
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
+        ),
+        'Doctrine\\Bundle\\FixturesBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-fixtures-bundle',
         ),
         'Doctrine\\Bundle\\DoctrineBundle\\' => 
         array (

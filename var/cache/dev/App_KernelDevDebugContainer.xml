@@ -14,6 +14,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -43,6 +44,10 @@
       <parameter key="SecurityBundle" type="collection">
         <parameter key="path">/Users/richard/Documents/WEB/Projet Tournoi/foot/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineFixturesBundle" type="collection">
+        <parameter key="path">/Users/richard/Documents/WEB/Projet Tournoi/foot/vendor/doctrine/doctrine-fixtures-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -225,6 +230,9 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\TeamController"/>
       </call>
+    </service>
+    <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -2965,6 +2973,25 @@
         <argument>security:encode-password</argument>
       </call>
     </service>
+    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
+      <tag name="console.command" command="doctrine:fixtures:load"/>
+      <argument type="service" id="doctrine.fixtures.loader"/>
+      <argument type="service" id="doctrine"/>
+      <call method="setName">
+        <argument>doctrine:fixtures:load</argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.loader" class="Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader" public="false">
+      <argument type="service" id="service_container"/>
+      <call method="addFixtures">
+        <argument type="collection">
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+        </argument>
+      </call>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -2986,6 +3013,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TeamController" class="App\Controller\TeamController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CompetitionType" class="App\Form\CompetitionType" autowire="true" abstract="true"/>
@@ -3573,7 +3602,7 @@
     <service id=".errored..service_locator.Lsdpueu.App\Entity\Stade" class="App\Entity\Stade"/>
     <service id=".errored..service_locator.S6VMuve.App\Entity\Team" class="App\Entity\Team"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.zis8TIm"/>
+      <argument type="service" id=".service_locator.xLV30kn"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -3631,6 +3660,7 @@
         <argument key="debug:twig">twig.command.debug</argument>
         <argument key="lint:twig">twig.command.lint</argument>
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
+        <argument key="doctrine:fixtures:load">doctrine.fixtures_load_command</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -3651,7 +3681,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.zis8TIm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.xLV30kn" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -3688,6 +3718,7 @@
         <argument key="doctrine.database_drop_command" type="service" id="doctrine.database_drop_command"/>
         <argument key="doctrine.database_import_command" type="service" id="doctrine.database_import_command"/>
         <argument key="doctrine.ensure_production_settings_command" type="service" id="doctrine.ensure_production_settings_command"/>
+        <argument key="doctrine.fixtures_load_command" type="service" id="doctrine.fixtures_load_command"/>
         <argument key="doctrine.mapping_convert_command" type="service" id="doctrine.mapping_convert_command"/>
         <argument key="doctrine.mapping_import_command" type="service" id="doctrine.mapping_import_command"/>
         <argument key="doctrine.mapping_info_command" type="service" id="doctrine.mapping_info_command"/>
